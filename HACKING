@@ -1,0 +1,60 @@
+wmsystray HACKING
+
+	1. Source code layout.
+	2. Coding style and conventions
+	3. Source code management
+
+
+1. Source code layout
+=====================
+
+The xembed directory contains wrapper code for the XEMBED protocol. I'm
+keeping it separate because I'd like to move it into its own library fairly
+soon.
+
+The wmsystray directory contains all the source code for wmsystray.
+
+
+2. Coding style and conventions
+===============================
+
+Source code is formatted to be readable in an 80-column terminal window,
+usually 24 lines high, but occasionally taller. (My development environment
+is an X11 desktop with lots of 80x24 xterms.)
+
+Coding style generally follows the Linux Documentation/CodingStyle document.
+(Only the first six sections are relevant.) It can be found in the Documentation
+directory of any reasonably recent Linux source tree. If you don't have one,
+the quickest way to get at this document is probably the Linux Cross Reference
+at http://lxr.linux.no/
+
+To sum up: K&R bracing and indentation, 8-character indents (but use tab
+characters to perform all block-level indentation), sane variable naming,
+simple, short functions as possible. "Mixed case in variable names is ... a
+shooting offense." (That means variable names should_look_like_this.)
+
+Composite types are always referred to as struct struct_name, and generally
+not silly typedefs.
+
+
+3. Source code management
+=========================
+
+wmsystray is maintained using GNU Arch, more information about which can be
+found at <http://www.gnu.org/software/gnu-arch/>. A beginner's introduction to
+GNU arch can be found at <http://regexps.srparish.net/tutorial-tla/arch.html>.
+Another quick walkthrough of how to get started with arch can be found at
+<http://web.verbum.org/files/rhythmbox-arch-irc.log>.
+
+A publicly-readable copy of the "main" arch repository is at
+<http://kai.vm.bytemark.co.uk/~arashi/arch/>; the category is
+arashi@kai.vm.bytemark.co.uk--<year>/wmsystray--mainline--<version>
+Currently, <year> is "2004" and <version> is "0.1".
+
+Patches or bug reports may be sent to me at arashi@kai.vm.bytemark.co.uk.
+Unidiff-formatted patches (generated using the -u option to GNU diff) are
+preferred. (Note that GNU Arch will do this for you if you execute
+"tla what-changed --diffs".)
+
+If you plan on maintaining a separate, publicly-available repository, drop me an
+email and I'll link to it on the wmsystray development page.

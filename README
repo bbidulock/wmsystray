@@ -1,0 +1,76 @@
+                                wmsystray README
+
+Contents
+ 1. About wmsystray
+ 2. Installing wmsystray
+ 3. System requirements
+ 4. License/Copyright Information
+ 5. Development Information
+ A. Footnotes
+
+
+About wmsystray
+===============
+
+wmsystray is meant to be used as a Window Maker dock applet. wmsystray provides
+a notification area, or "system tray", in a manner compliant with
+freedesktop.org's System Tray Protocol Specification[1]. This allows wmsystray
+to serve as a system tray area for recent GNOME and KDE applications, and
+should work for applications from GNOME 2.x and later or KDE 3.x and later.
+
+wmsystray is written and maintained by
+Matthew Reppert <arashi@kai.vm.bytemark.co.uk>
+
+wmsystray's homepage is at <http://kai.vm.bytemark.co.uk/~arashi/wmsystray/>.
+
+
+Installing wmsystray
+==================
+
+To build wmsystray from source, just type "make" in the top source directory
+(the same directory this file is in). You may need to change the defines in
+Rules.make to match your system; for example, X11 might not be in /usr/X11R6
+(it is on most GNU/Linux systems). You will need the XFree86-devel package
+(or xlibs-devel, or whatever package provides files like
+/usr/X11R6/include/Xlib.h) to compile on package-managed systems like Debian
+and Mandrake.
+
+Binary packages (namely, rpms and debs) of wmsystray are provided as a
+convenience on the download page.
+
+
+System requirements
+===================
+
+wmsystray needs X11 (obviously). Future versions of wmsystray may optionally
+use the SHAPE extension if it's present. Currently, wmsystray is targeted to
+work best under Window Maker as a dock app, though it will actually run fine
+regardless of what window manager you use. It just may look a little out of
+place.
+
+
+Liscense/Copyright Information
+==============================
+
+wmsystray is licensed under the GNU General Public License, version 2. No other
+version of the GPL is valid.
+
+
+Development Information
+=======================
+
+wmsystray is developed using GNU Arch. For more information, including the
+location of wmsystray's central arch repository, please see the file HACKING.
+
+
+Footnotes
+=========
+
+[1] http://freedesktop.org/Standards/systemtray-spec
+  However, to support most interesting functionality, system trays also need
+  to implement the "server" side of XEMBED, and really should know about
+  the Extended Window Manager Hints specification, or EMWH, also knows as
+  NetWM.
+
+  XEMBED - http://freedesktop.org/Standards/xembed-spec
+  EMWH - http://www.freedesktop.org/standards/wm-spec

@@ -1,0 +1,16 @@
+Package: wmsystray
+Version: 0.1.1
+Section: x11
+Priority: extra
+Architecture: i386
+Maintainer: Matthew Reppert <arashi@kai.vm.bytemark.co.uk>
+Depends: xlibs
+Suggests: wmaker
+Description: System tray applet / Window Maker dock app
+ wmsystray provides a system tray area for other applications to display icons
+ in. 
+ . 
+ wmsystray provides a system tray area compliant with the freedesktop.org
+ System Tray Protocol specification.
+ .
+ Homepage: http://kai.vm.bytemark.co.uk/~arashi/wmsystray/

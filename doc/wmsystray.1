@@ -1,0 +1,38 @@
+.TH wmsystray 1 "15 February 2004" "wmsystray 0.1.0" ""
+.SH NAME
+wmsystray \- System tray application/Window Maker dock app
+
+.SH SYNOPSIS
+\fBwmsystray\fR [\fI-geometry\fR WxH[+X+Y]] [\fI-display\fR DISPLAY] [\fI--nowm\fR]
+
+.SH DESCRIPTION
+
+\fBwmsystray\fR provides a system tray area in a manner compliant with
+freedesktop.org's System Tray Protocol specification.
+
+.SH OPTIONS
+.TP
+.B -geometry 
+Specifies wmsystray's window geometry in the standard X11 geometry format.
+For example, \fI-geometry 64x64\fR specifies a window 64 pixels wide and
+64 pixels high, like a Window Maker dock app; \fI-geometry 64x64+0+416\fR
+specifies a window 64 pixels wide and 64 pixels tall located at screen
+position (0,416).
+.TP
+.B -display
+Specifies an X11 display to connect to.
+.TP
+.B --nowm
+Specifies that wmsystray shouldn't act like a Window Maker dock app. You
+should specify this option if you don't run Window Maker, or wmsystray
+won't display correctly.
+
+.SH BUGS
+wmsystray currently only displays the first four applications that dock with
+it correctly. This will be fixed in a later release.
+
+.SH AUTHOR
+Matthew Reppert <arashi@kai.vm.bytemark.co.uk>
+
+.SH STANDARDS
+POSIX, freedesktop.org System Tray Protocol specification
